@@ -32,14 +32,13 @@ require_once __DIR__ . "/models/db.php";
         <div class="container">
             <div class="row">
                 <?php foreach($films as $film): ?>
-                <div class="col-4 my-5">
-                    <div class="card bg-dark" style="width:18rem;">
-                      <img src="" class="card-img-top" alt="...">
+                <div class="col-4 my-5 row-gap-3">
+                    <div class="card bg-dark text-left " >
+                      <img style="width: 100% ; height:30rem;" src="<?php echo $film->__get('poster')?>" class="card-img-top" alt="...">
                       <div class="card-body text-light">
-                        <h5 class="card-title">Card title</h5>
-                        <h6 class="card-subtitle mb-2 text-muted ">Card subtitle</h6>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        b5
+                        <h5 class="card-title"><?php echo $film->__get('titolo')?></h5>
+                        <h6 class="card-subtitle mb-2"><?php echo $film->__get('lingua')?></h6>
+                        <p class="card-text"><?php echo $film->__get('voto')?></p>
                       </div>
                     </div>
                 </div>
