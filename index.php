@@ -8,4 +8,6 @@ $film4 = new Production('The Dark Knight', 'English', 9.0);
 $film5 = new Production('Schindler\'s List', 'English', 8.9,);
 $film6 = new Production('Inception', 'English', 8.8, );
 
-var_dump($film1,$film2,$film3,$film4,$film5,$film6);
+$films=[$film1,$film2,$film3,$film4,$film5,$film6];
+
+var_dump($films);
