@@ -1,19 +1,7 @@
 <?php
-class Production
-{
-
-    public $titolo;
-    public $lingua;
-    public $voto;
-    public $poster;
-
-    public function __construct($titolo, $lingua, $voto, $poster)
-    {
-        $this->titolo = $titolo;
-        $this->lingua = $lingua;
-        $this->voto = $voto;
-        $this->poster = $poster;
-    }
+require_once __DIR__ . '/genre.php';
+class Production{
+    public function __construct(public string $titolo,public string $lingua,public int $voto,public string $poster,public Genre $genere){}
 
     public function __get($property)
     {
@@ -21,7 +9,7 @@ class Production
         if (property_exists($this, $property)) {
             /* ce la restituisce cosi */
             return $this->$property;
-        };
+        }
     }
-    
 }
+

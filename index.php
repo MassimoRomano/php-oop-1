@@ -1,5 +1,4 @@
 <?php
-require_once __DIR__ . "/models/production.php";
 require_once __DIR__ . "/models/db.php";
 
 ?>
@@ -39,6 +38,8 @@ require_once __DIR__ . "/models/db.php";
                         <h5 class="card-title"><?php echo $film->__get('titolo')?></h5>
                         <h6 class="card-subtitle mb-2"><?php echo $film->__get('lingua')?></h6>
                         <p class="card-text"><?php echo $film->__get('voto')?></p>
+                        <p class="card-text"><?php echo $film->genere->genere?></p>
+                        <p class="card-text"><?php echo $film->genere->descrizione?></p>
                       </div>
                     </div>
                 </div>
