@@ -16,34 +16,43 @@ require_once __DIR__ . "/models/db.php";
 <body>
     <header>
         <nav class="navbar navbar-expand navbar-dark bg-dark">
-            <ul class="nav navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#" aria-current="page">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-            </ul>
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
     <main>
         <div class="container">
             <div class="row">
-                <?php foreach($films as $film): ?>
-                <div class="col-4 my-5 row-gap-3">
-                    <div class="card bg-dark text-left " >
-                      <img style="width: 100% ; height:30rem;" src="<?php echo $film->__get('poster')?>" class="card-img-top" alt="...">
-                      <div class="card-body text-light">
-                        <h5 class="card-title"><?php echo $film->__get('titolo')?></h5>
-                        <h6 class="card-subtitle mb-2"><?php echo $film->__get('lingua')?></h6>
-                        <p class="card-text"><?php echo $film->__get('voto')?></p>
-                        <p class="card-text"><?php echo $film->genere->genere?></p>
-                        <p class="card-text"><?php echo $film->genere->descrizione?></p>
-                      </div>
+                    <h2 class="text-center mt-5">FILM</h2>
+                    <div class="row">
+                        <?php foreach ($films as $film) : ?>
+                            <div class="col-4 my-3">
+                                <div class="card">
+                                    <img style="height:34rem;" src="<?php echo $film->poster ?>" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title"><?php echo $film->titolo ?></h5>
+                                        <h6 class="card-subtitle mb-2 text-muted"><?php echo $film->lingua ?></h6>
+                                        <p class="card-text">Voto: <?php echo $film->voto ?></p>
+                                        <?php foreach ($film->genere as $genere) : ?>
+                                        <p class="card-text">Genere: <?php echo $genere->genere ?></p>
+                                        <p class="card-text">Descrizione: <?php echo $genere->descrizione ?></p>
+                                        <?php endforeach; ?>
+                                        <p class="card-text">Profitti: <?php echo $film->profitti ?></p>
+                                        <p class="card-text">Profitti: <strong><?php echo $film->durata ?></strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
                     </div>
-                </div>
-                <?php endforeach; ?>
             </div>
         </div>
     </main>
