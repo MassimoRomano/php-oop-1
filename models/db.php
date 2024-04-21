@@ -25,6 +25,16 @@ $films = [
     new Movie('Inception', 'English', 8, 'https://m.media-amazon.com/images/I/912AErFSBHL._AC_UF1000,1000_QL80_.jpg', [$generi[5]], 6000000, '2h 28min')
 ];
 
+/* SERIE*/
+$series = [
+    new Serie('Breaking Bad', 'English', 9, 'https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDQ1LWFjMjMtNjA5ZDdiYjdiODU5XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_.jpg', [$generi[0]], 5),
+    new Serie('Game of Thrones', 'English', 8, 'https://m.media-amazon.com/images/M/MV5BN2IzYzBiOTQtNGZmMi00NDI5LTgxMzMtN2EzZjA1NjhlOGMxXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg', [$generi[1]], 8),
+    new Serie('Stranger Things', 'English', 8, 'https://mr.comingsoon.it/imgdb/serietv/serie/1540/1540.jpg', [$generi[2]], 4),
+    new Serie('The Crown', 'English', 8, 'https://pad.mymovies.it/filmclub/2016/09/252/locandina.jpg', [$generi[3]], 4),
+    new Serie('Spartacus', 'English', 7, 'https://pad.mymovies.it/filmclub/2010/03/012/locandina.jpg', [$generi[4]], 4),
+    new Serie('The Mandalorian', 'English', 8, 'https://www.orientaserie.it/wp-content/uploads/2022/09/IMG_1071-scaled-1.jpeg', [$generi[5]], 2)
+]; 
+
 
  
 
